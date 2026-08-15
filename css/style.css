@@ -1,0 +1,680 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    overflow: hidden;
+
+    background:url("../images/hero-bg.jpg")center center/cover no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.btn{
+    padding: 12px 35px;
+    margin-top: auto;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg,#ff7eb3,#ff4181);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.4s ease,
+                box-shadow 0.4s ease,
+                background 0.4s ease;
+
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+
+    display: inline-block;
+
+    align-self: center;
+
+    transform: translateY(-10px);
+
+}
+.btn:hover{
+    background: #ff1493;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255,182,193,0.5);
+
+    transform: scale(1.08);
+    background: #ff8fcb;
+    box-shadow: 0 10px 20px #ff7eb3;
+
+    transition: all 0.4s ease;
+}
+.btn:active{
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0,0,0,0.35);
+}
+
+.container{
+    width: 400px;
+    margin: auto;
+    margin-top: 120px;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+.card{
+    background: rgba(255,255,255,0.12);
+    width: 420px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    transition: all 0.4s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    animation: cardFade 1s ease;
+
+    @keyframes cardFade {
+        from{
+            opacity: 0;
+            transform:translateY(40px);
+        }
+
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    }
+}
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    
+    transform: scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.image img{
+    width: 180px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 20px;
+
+    animation: float 4s ease-in-out infinite;
+
+    transition: transform 0.4s ease;
+
+    filter: drop-shadow(0 0 20px rgba(255,182,193,0.6));
+}
+@keyframes float{
+
+     0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+.cloude{
+    position: absolute;
+    opacity: 0.5;
+    pointer-events: none;
+}
+.cloude1{
+    top: 8%;
+    left: -250px;
+    width: 220px;
+    animation: cloudeMove1 40s linear infinite;
+}
+.cloude2{
+    top: 30%;
+    left: -350px;
+    width: 280px;
+    animation: cloudeMove2 55s linear infinite;
+}
+.cloude3{
+    top: 65%;
+    left: -300px;
+    width: 200px;
+    animation: cloudeMove3 48s linear infinite;
+}
+
+@keyframes cloudeMove1{
+    from{transform: translateX(0);}
+    to{transform: translateX(1700px);}
+}
+
+@keyframes cloudeMove2{
+    from{transform: translateX(0);}
+    to{transform: translateX(1800px);}
+}
+
+@keyframes cloudeMove3{
+    from{transform: translateX(0);}
+    to{transform: translateX(1750px);}
+}
+.page2{
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../images/night-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.letter-card{
+
+    width: 600px;
+    padding: 50px;
+
+    border-radius: 25px;
+
+    background: rgba(10,15,35,0.45);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: white;
+    
+    box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+
+    max-width: 90%;
+
+}
+
+.letter-title{
+    text-align: center;
+    color: #fff;
+    font-size: 46px;
+    margin-bottom: 30px;
+    text-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+.letter-text{
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.9;
+    text-align: left;
+}
+
+.letter-card h1{
+    font-size:42px;
+    margin-bottom:25px;
+    text-align:center;
+
+}
+
+.letter-card p{
+    font-size: 20px;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.95)
+}
+.page3{
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-image: url("../images/night-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.memory-container{
+    width: 1000px;
+    padding: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+
+} 
+
+.memory-photo{
+    width: 330px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0,15px 35px rgba(0,0,0,.4);
+    margin-bottom: 25px;
+    animation: slideLeft 1s ease;
+
+}
+
+@keyframes slideLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.memory-photo img{
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: 0.4s ease;
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(255,255,255,.25);
+}
+
+.memory-text{
+    color: rgba(255,182,193,0.95);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 12px rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-top: 20px;
+    flex: T;
+} 
+
+.memory-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 430px;
+    height: 520px;
+    padding: 35px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(16px);
+    border-radius: 25px;
+}
+
+.memory-content h1{
+    font-size: 48px;
+    margin-bottom: 25px;
+    color: white;
+    text-shadow: 0 0 15px rgba(255,255,255,.7);
+}
+
+.memory-poem{
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.memory-card p{
+    color: white;
+}
+
+.poem-card{
+    width: 430px;
+    height: 560px;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(20,30,60,0.60);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+
+    animation: slideRight 1s ease;
+
+    color: white;
+
+}
+
+@keyframes slideRight{
+    from{
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.poem-card p{
+    color: white;
+}
+
+.quote{
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.page4{
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-image: url("../images/galaxy.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.love-card{
+    width: 550px;
+    padding: 40px;
+    padding-bottom: 8px;
+
+    background: rgba(10,20,45,0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+
+}
+
+.love-card h1{
+    color: white;
+}
+
+.love-card .quote{
+    color: rgba(255,255,255,0.9);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+memory-content h1{
+    font-size: 42px;
+    margin-bottom: 25px;
+    color: #ffd6e7;
+
+}
+
+.love-text{
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-style: italic;
+    font-family: "Georgia",serif;
+}
+
+.love-text p{
+    margin-bottom: 10px;
+}
+
+.last-line{
+    font-size: 18px;
+    color: #fff;
+    font-style: italic;
+    font-family: "Georgia",serif;
+    margin: 4px;
+
+}
+.page4-btn{
+    padding: 12px 35px;
+    margin-top: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg,#ff7eb3,#ff4181);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.4s ease,
+                box-shadow 0.4s ease,
+                background 0.4s ease;
+
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+
+    display: inline-block;
+
+    align-self: center;
+
+}
+.page4-btn:hover{
+    background: #ff1493;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255,182,193,0.5);
+
+    background: #ff8fcb;
+    box-shadow: 0 10px 20px #ff7eb3;
+
+    transition: all 0.4s ease;
+}
+.page4-btn:active{
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0,0,0,0.35);
+}
+
+.page5{
+    margin:0;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+
+    background: url("../images/night-sky.png");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+body{
+    margin: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.night-scene{
+    width: 100%;
+    min-height: 100vh;
+
+    background: url("../images/night-sky.png") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.content{
+    text-align: center;
+    z-index: 2;
+}
+
+.wish{
+    color: white;
+    font-family: "just Another Hand", cursive;
+    font-size: 22px;
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 8px white,0 0 18px rgba(255,255,255,0.7);
+
+    cursor: pointer;
+
+    animation: wishGlow 2s ease-in-out infinite;
+
+
+}
+
+@keyframes wishGlow {
+    0%, 100%{
+        opacity: 0.7;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+.main-text{
+    color: white;
+    font-size: 52px;
+    text-shadow: 0 0 20px rgba(255,255,255,.8);
+    margin-top: 30px;
+}
+
+.sub-text{
+    color: #ffd9f6;
+    font-size: 26px;
+    margin-top: 15px;
+}
+
+.heart{
+    width: 90px;
+    height: 90px;
+
+    margin: 40px auto;
+
+    background: #ff5fa2;
+
+    transform: rotate(-45deg);
+
+    position: relative;
+
+    animation: pulse 2s infinite;
+
+    display: none;
+    font-size: 60px;
+}
+
+.heart::before,
+.heart::after{
+    content: "";
+    width: 90px;
+    height: 90px;
+
+    background: #ff5fa2;
+
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+.heart::before{
+    top: -45px;
+    left: 0;
+}
+
+.heart::after{
+    top: 0;
+    left: 45px;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1) rotate(-45deg);
+    }
+    50%{
+        transform: scale(1.15) rotate(-45deg);
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.message-box{
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+}
+
+.shooting-star{
+    display: none;
+    width: 100px;
+    height: 3px;
+    background: white;
+    margin: 30px auto;
+    cursor: pointer;
+    transform: rotate(-30deg);
+
+}
+
+.shooting-star.active{
+    display: block;
+}
+
+.message-box.hidden{
+    display: none;
+}

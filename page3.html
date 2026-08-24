@@ -9,6 +9,10 @@
     </head>
 
     <body class="page3">
+
+        <audio id="bgMusic" autoplay loop>
+            <source src="./audio/kara-sevda-guitar.mp3"type="audio/mpeg">
+        </audio>
         <div class="memory-container">
             <div class="memory-photo">
                 
@@ -37,7 +41,7 @@
                     <br></br>
 
                     And no matter where life takes us,
-                    these memories will always reamain
+                    these memories will always remain
                     close to my heart.✨🩶
 
 
@@ -53,6 +57,26 @@
             </div>
 
         </div>
+
+        <script>
+            const bgMusic =document.getElementById("bgMusic");
+
+            const savedTime =sessionStorage.getItem("musicTime");
+
+            if(savedTime){
+                bgMusic.currentTime =parseFloat(savedTime);
+            }
+
+            bgMusic.play().catch(()=>{
+                document.addEventListener("click",() =>{
+                    bgMusic.play();
+                },{once:true});
+            });
+
+            window.addEventListener("beforeunload",() =>{
+                sessionStorage.getItem("musicTime",byMusic.currentTime);
+            });
+        </script>
 
         
     </body>

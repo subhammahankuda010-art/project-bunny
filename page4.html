@@ -9,6 +9,9 @@
     </head>
     
     <body class="page4">
+        <audio id="bgMusic" autoplay loop>
+            <source src="./audio/kara-sevda-guitar.mp3"type="audio/mpeg">
+        </audio>
         <div class="love-card">
 
             <h1> Why I'm Lucky <br> 
@@ -47,6 +50,26 @@
                 💗✨ One Last Surprise ✨💗
             </a>
         </div>
+
+        <script>
+            const bgMusic =document.getElementById("bgMusic");
+            
+            const savedTime = sessionStorage.getItem("musicTime");
+            
+            if(savedTime){
+                bgMusic.currentTime =parseFloat(savedTime);
+            }
+
+            bgMusic.play().catch(()=>{
+                document.addEventListener("click",()=>{
+                    bgMusic.play()
+                },{once:true});
+            });
+
+            window.addEventListener("beforeunload",()=>{
+                sessionStorage.setItem("musicTime",bgMusic.currentTime);
+            });
+        </script>
 
     </body> 
 </html>

@@ -74,7 +74,7 @@ body{
 }
 .card{
     background: rgba(255,255,255,0.12);
-    width: 420px;
+    width: 420pz;
     margin: auto;
     padding: 40px;
     border-radius: 25px;
@@ -597,6 +597,15 @@ body{
     margin-top: 15px;
 }
 
+#youText{
+    cursor: pointer;
+    transition: text-shadow 0.3s ease,transform 0.3s ease;
+}
+
+#youText:hover{
+    text-shadow: 0 0 12px #fff,0 0 24px rgba(255,217,246,0.8);
+    transform: scale(1.03);
+}
 .heart{
     width: 90px;
     height: 90px;
@@ -678,3 +687,106 @@ body{
 .message-box.hidden{
     display: none;
 }
+
+@media(max-width: 600px){
+
+    .card{
+        width: 90%;
+        box-sizing: border-box;
+    }
+    
+    .letter-card{
+        width: 90%;
+        box-sizing: border-box;
+        padding: 25px;
+        max-width: border-box;
+    }
+
+    .memory-photo img{
+        width: 100%;
+        height: auto;
+        display: block;
+        
+    }
+
+    .memory-photo{
+        width: 260px;
+        height: 300px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
+
+    .poem-card{
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        min-height: 500px;
+        padding: 18px 20px;
+        box-sizing: border-box;
+        
+    }
+
+    .poem-card.btn{
+        margin-top: 10px;
+        transform: translateY(-5px);
+    }
+
+    .memory-container{
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        gap: 25px;
+        box-sizing: border-box;
+    }
+
+    .memory-content h1{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .poem-card p{
+        margin: 8px 0;
+        line-height: 1.35;
+    }
+
+    .love-card{
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 25px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+    }
+
+    .love-card h1{
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .love-text{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .last-line{
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .page4-btn{
+        display: block;
+        width: fit-content;
+        margin: 10px auto 0;
+        font-size: 16px;
+        padding: 11px 24px;
+        box-sizing: border-box;
+    }
+
+
+    
+
+    
+
+}
+
